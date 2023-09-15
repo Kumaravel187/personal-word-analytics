@@ -1,0 +1,28 @@
+/* Set the base styling for the entire HTML document */
+html {
+  box-sizing: border-box;
+  font-size: 100%; /* Reset font size for consistent sizing */
+}
+
+/* Apply the 'box-sizing' property to all elements and their pseudo-elements */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Inherit the 'box-sizing' property from the parent */
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the body of the webpage */
+body {
+  /* min-height: 100vh; /* Ensure the body covers at least the viewport height */
+  margin: 0; /* Remove default margin to avoid unexpected spacing */
+  padding: 0; /* Vertical and horizontal padding for the content area */
+  // font-family: "Work Sans", sans-serif;
+  min-height: 100vh;
+  background-color: yellow;
+}
+
+/* Mobile view */
+// @media (max-width: 50rem) {
+// }
