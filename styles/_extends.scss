@@ -1,7 +1,15 @@
-// Placeholder for centering elements using flexbox
-%flex-center {
-  // Display flex and center content horizontally and vertically
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Placeholder for centering elements using flexbox */
+%flex {
+  display: flex; /* Set the display property to 'flex'. */
+}
+
+/* Placeholder for making text uppercase */
+%text-uppercase {
+  text-transform: uppercase; /* Apply uppercase text transformation. */
+}
+
+/* Placeholder for applying a CSS animation */
+%animation {
+  animation-duration: 1s; /* Set the duration of the animation to 1 second. */
+  animation-name: animateToLeft; /* Set the animation name to 'animateToLeft'. */
 }

@@ -1,0 +1,136 @@
+/* Styling for the background element */
+.background {
+  position: absolute; /* Positioned absolutely within its container */
+  top: 0; /* Anchored to the top of its container */
+  z-index: -1; /* Positioned behind other elements */
+  height: 15rem; /* Fixed height */
+  width: 100%; /* Full width */
+  background-image: linear-gradient(
+      to right,
+      $true-blue-alpha,
+      $english-violet-alpha
+    ), url("../images/background.jpg"); /* Background image with gradient and URL */
+  background-size: cover; /* Cover the entire element with the background image */
+}
+
+/* Styling for the first heading */
+.first-heading {
+  font-size: 4.375rem; /* Large font size */
+  @extend %text-uppercase, %animation; /* Reusing styles from placeholders */
+  color: $celadon; /* Text color */
+  letter-spacing: 0.35rem; /* Letter spacing */
+  margin-top: 3rem; /* Top margin */
+  font-weight: 700; /* Font weight */
+  text-align: center; /* Center align text */
+
+  /* Special styling for nested element */
+  &__special {
+    font-weight: 300; /* Reduced font weight */
+    color: $icterine; /* Different text color */
+  }
+}
+
+/* Styling for a section */
+.section {
+  @extend %flex, %animation; /* Reusing styles for flex and animation */
+  width: 50rem; /* Fixed width (may need adjustment) */
+  height: 30rem; /* Fixed height (may need adjustment) */
+  background-color: $blueish-gray-alpha; /* Background color */
+  border-radius: 2rem; /* Rounded corners */
+  box-shadow: 0px 1.6875rem 1.25rem 0.875rem rgba(0, 0, 0, 0.2); /* Box shadow */
+  margin-top: 3rem; /* Top margin */
+  overflow: hidden; /* Hide overflowing content */
+  cursor: pointer; /* Change cursor on hover */
+
+  /* Styling for nested textarea element */
+  &__textarea {
+    resize: none; /* Disable textarea resizing */
+    flex: 2; /* Take up 2/3 of available space */
+    background-color: $cambridge-blue-aplha; /* Background color */
+    padding: 2rem; /* Padding */
+    font: inherit; /* Inherit font properties */
+  }
+
+  /* Styling for nested stats container */
+  &__stats {
+    @extend %flex; /* Reusing flex styles */
+    flex: 1.6; /* Take up 1.6 times the available space */
+    flex-wrap: wrap; /* Wrap elements to the next row when needed */
+
+    /* Styling for individual stat panels */
+    .stat {
+      @include stat-panel-design; /* Reusing styles from a mixin */
+
+      /* Borders for specific stat panels */
+      &:nth-child(1),
+      &:nth-child(2) {
+        border-bottom: 1px solid $border-color; /* Add bottom border */
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        border-left: 1px solid $border-color; /* Add left border */
+      }
+
+      /* Styling for stat numbers */
+      &__number {
+        font-size: 1.75rem; /* Font size */
+        font-weight: 500; /* Font weight */
+        color: $cambridge-blue; /* Text color */
+      }
+
+      /* Styling for stat headings */
+      &__heading {
+        font-size: 0.75rem; /* Font size */
+        color: $border-color; /* Text color */
+        @extend %text-uppercase; /* Reusing uppercase text transformation */
+        letter-spacing: 0.1rem; /* Letter spacing */
+        margin-top: 0.5rem; /* Top margin */
+      }
+    }
+  }
+}
+
+/* Styling for the footer */
+.footer {
+  @extend %flex, %animation; /* Reusing styles for flex and animation */
+  justify-content: space-between; /* Space between children */
+  width: 50rem; /* Fixed width (may need adjustment) */
+  margin-top: 2rem; /* Top margin */
+  color: $border-color; /* Text color */
+}
+
+/* Styling for stat numbers with the "error" class */
+.stat__number.error {
+  color: red; /* Red text color for error state */
+  font-weight: 700; /* Increased font weight for emphasis */
+}
+
+/* Media query for tablet view */
+@media (max-width: 65rem) {
+  html {
+    font-size: $font-md; /* Adjust font size for tablet view */
+  }
+}
+
+/* Media query for mobile view */
+@media (max-width: 50rem) {
+  html {
+    font-size: $font-sm; /* Adjust font size for mobile view */
+  }
+  .section {
+    flex-direction: column; /* Change flex direction for sections */
+
+    /* Adjust borders for stat panels */
+    .stat {
+      &:nth-child(1),
+      &:nth-child(2) {
+        border-bottom: none; /* Remove bottom border */
+      }
+
+      &:nth-child(3) {
+        border-left: 1px solid $border-color; /* Add left border */
+      }
+    }
+  }
+}

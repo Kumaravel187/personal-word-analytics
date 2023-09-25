@@ -1,1 +1,42 @@
+/* Color Variables */
+$english-violet: hsl(279, 19%, 23%); /* Dark violet color */
+$english-violet-alpha: hsla(
+  279,
+  19%,
+  23%,
+  0.9
+); /* Dark violet color with 90% opacity */
 
+$true-blue: hsl(217, 34%, 48%); /* True blue color */
+$true-blue-alpha: hsla(
+  217,
+  34%,
+  48%,
+  0.9
+); /* True blue color with 90% opacity */
+
+$icterine: hsl(62, 85%, 68%); /* Icterine color */
+
+$cambridge-blue: hsla(155, 19%, 66%); /* Cambridge blue color */
+$cambridge-blue-aplha: hsla(
+  155,
+  19%,
+  66%,
+  0.6
+); /* Cambridge blue color with 60% opacity */
+
+$celadon: hsl(113, 32%, 69%); /* Celadon color */
+
+$blueish-gray-alpha: hsla(
+  197,
+  33%,
+  96%,
+  1
+); /* Blueish gray color with full opacity */
+
+$border-color: rgba(100, 100, 100, 0.5); /* Border color with 50% opacity */
+
+/* Font Size Variables */
+$font-sm: 45%; /* Small font size */
+$font-md: 85%; /* Medium font size */
+$font-lar: 100%; /* Large font size */

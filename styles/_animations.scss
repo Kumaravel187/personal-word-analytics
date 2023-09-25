@@ -1,0 +1,23 @@
+/* Define a keyframes animation named "animateToLeft." */
+@keyframes animateToLeft {
+  /* Keyframe at 0% progress (the start of the animation). */
+  0% {
+    opacity: 0; /* Initial opacity set to 0 (completely transparent). */
+    transform: translateX(
+      -2rem
+    ); /* Initial horizontal translation to the left by -2rem. */
+  }
+
+  /* Keyframe at 80% progress (during the animation). */
+  80% {
+    transform: translateX(1rem); /* Translate to the right by 1rem. */
+  }
+
+  /* Keyframe at 100% progress (the end of the animation). */
+  100% {
+    opacity: 1; /* Final opacity set to 1 (fully opaque). */
+    transform: translateX(
+      0rem
+    ); /* Return to the original horizontal position (0rem). */
+  }
+}

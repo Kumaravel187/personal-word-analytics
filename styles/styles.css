@@ -1,6 +1,55 @@
+/* Color Variables */
+/* Dark violet color */
+/* Dark violet color with 90% opacity */
+/* True blue color */
+/* True blue color with 90% opacity */
+/* Icterine color */
+/* Cambridge blue color */
+/* Cambridge blue color with 60% opacity */
+/* Celadon color */
+/* Blueish gray color with full opacity */
+/* Border color with 50% opacity */
+/* Font Size Variables */
+/* Small font size */
+/* Medium font size */
+/* Large font size */
+/* Placeholder for centering elements using flexbox */
+.footer, .section__stats, .section, body {
+  display: flex; /* Set the display property to 'flex'. */
+}
+
+/* Placeholder for making text uppercase */
+.section__stats .stat__heading, .first-heading {
+  text-transform: uppercase; /* Apply uppercase text transformation. */
+}
+
+/* Placeholder for applying a CSS animation */
+.footer, .section, .first-heading {
+  animation-duration: 1s; /* Set the duration of the animation to 1 second. */
+  animation-name: animateToLeft; /* Set the animation name to 'animateToLeft'. */
+}
+
+/* Sass mixin for styling stat panels */
+/* Define a keyframes animation named "animateToLeft." */
+@keyframes animateToLeft {
+  /* Keyframe at 0% progress (the start of the animation). */
+  0% {
+    opacity: 0; /* Initial opacity set to 0 (completely transparent). */
+    transform: translateX(-2rem); /* Initial horizontal translation to the left by -2rem. */
+  }
+  /* Keyframe at 80% progress (during the animation). */
+  80% {
+    transform: translateX(1rem); /* Translate to the right by 1rem. */
+  }
+  /* Keyframe at 100% progress (the end of the animation). */
+  100% {
+    opacity: 1; /* Final opacity set to 1 (fully opaque). */
+    transform: translateX(0rem); /* Return to the original horizontal position (0rem). */
+  }
+}
 /* Set the base styling for the entire HTML document */
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Use border-box box model for all elements */
   font-size: 100%; /* Reset font size for consistent sizing */
 }
 
@@ -9,17 +58,151 @@ html {
 *::before,
 *::after {
   box-sizing: inherit; /* Inherit the 'box-sizing' property from the parent */
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Reset margin for all elements */
+  padding: 0; /* Reset padding for all elements */
 }
 
 /* Basic styling for the body of the webpage */
 body {
-  /* min-height: 100vh; /* Ensure the body covers at least the viewport height */
   margin: 0; /* Remove default margin to avoid unexpected spacing */
-  padding: 0; /* Vertical and horizontal padding for the content area */
-  min-height: 100vh;
-  background-color: yellow;
+  padding: 0; /* Reset padding for the body element */
+  font-family: "Roboto", sans-serif; /* Set the default font family for text */
+  min-height: 100vh; /* Ensure the body covers at least the viewport height */
+  background-color: #e1e8eb; /* Set the background color for the body */
+  /* Use the %flex placeholder to apply flexbox styles */
+  flex-direction: column; /* Arrange children in a column direction */
+  align-items: center; /* Center align child elements horizontally */
+  background-color: whitesmoke; /* Override background color with whitesmoke */
 }
 
-/* Mobile view *//*# sourceMappingURL=styles.css.map */
+textarea {
+  all: unset; /* Reset all styles for the textarea element */
+}
+
+/* Styling for the background element */
+.background {
+  position: absolute; /* Positioned absolutely within its container */
+  top: 0; /* Anchored to the top of its container */
+  z-index: -1; /* Positioned behind other elements */
+  height: 15rem; /* Fixed height */
+  width: 100%; /* Full width */
+  background-image: linear-gradient(to right, hsla(217, 34%, 48%, 0.9), hsla(279, 19%, 23%, 0.9)), url("../images/background.jpg"); /* Background image with gradient and URL */
+  background-size: cover; /* Cover the entire element with the background image */
+}
+
+/* Styling for the first heading */
+.first-heading {
+  font-size: 4.375rem; /* Large font size */
+  /* Reusing styles from placeholders */
+  color: hsl(113, 32%, 69%); /* Text color */
+  letter-spacing: 0.35rem; /* Letter spacing */
+  margin-top: 3rem; /* Top margin */
+  font-weight: 700; /* Font weight */
+  text-align: center; /* Center align text */
+  /* Special styling for nested element */
+}
+.first-heading__special {
+  font-weight: 300; /* Reduced font weight */
+  color: hsl(62, 85%, 68%); /* Different text color */
+}
+
+/* Styling for a section */
+.section {
+  /* Reusing styles for flex and animation */
+  width: 50rem; /* Fixed width (may need adjustment) */
+  height: 30rem; /* Fixed height (may need adjustment) */
+  background-color: hsl(197, 33%, 96%); /* Background color */
+  border-radius: 2rem; /* Rounded corners */
+  box-shadow: 0px 1.6875rem 1.25rem 0.875rem rgba(0, 0, 0, 0.2); /* Box shadow */
+  margin-top: 3rem; /* Top margin */
+  overflow: hidden; /* Hide overflowing content */
+  cursor: pointer; /* Change cursor on hover */
+  /* Styling for nested textarea element */
+  /* Styling for nested stats container */
+}
+.section__textarea {
+  resize: none; /* Disable textarea resizing */
+  flex: 2; /* Take up 2/3 of available space */
+  background-color: hsla(155, 19%, 66%, 0.6); /* Background color */
+  padding: 2rem; /* Padding */
+  font: inherit; /* Inherit font properties */
+}
+.section__stats {
+  /* Reusing flex styles */
+  flex: 1.6; /* Take up 1.6 times the available space */
+  flex-wrap: wrap; /* Wrap elements to the next row when needed */
+  /* Styling for individual stat panels */
+}
+.section__stats .stat {
+  flex: 1 9.375rem; /* Flexible width with a minimum of 9.375rem */
+  display: flex; /* Display as a flex container */
+  flex-direction: column; /* Arrange children in a column direction */
+  justify-content: center; /* Vertically center align child elements */
+  align-items: center; /* Horizontally center align child elements */
+  background-color: hsl(197, 33%, 96%); /* Background color */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+  /* Hover state */
+  /* Reusing styles from a mixin */
+  /* Borders for specific stat panels */
+  /* Styling for stat numbers */
+  /* Styling for stat headings */
+}
+.section__stats .stat:hover {
+  opacity: 0.5; /* Reduce opacity on hover */
+}
+.section__stats .stat:nth-child(1), .section__stats .stat:nth-child(2) {
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5); /* Add bottom border */
+}
+.section__stats .stat:nth-child(2), .section__stats .stat:nth-child(4) {
+  border-left: 1px solid rgba(100, 100, 100, 0.5); /* Add left border */
+}
+.section__stats .stat__number {
+  font-size: 1.75rem; /* Font size */
+  font-weight: 500; /* Font weight */
+  color: hsl(155, 19%, 66%); /* Text color */
+}
+.section__stats .stat__heading {
+  font-size: 0.75rem; /* Font size */
+  color: rgba(100, 100, 100, 0.5); /* Text color */
+  /* Reusing uppercase text transformation */
+  letter-spacing: 0.1rem; /* Letter spacing */
+  margin-top: 0.5rem; /* Top margin */
+}
+
+/* Styling for the footer */
+.footer {
+  /* Reusing styles for flex and animation */
+  justify-content: space-between; /* Space between children */
+  width: 50rem; /* Fixed width (may need adjustment) */
+  margin-top: 2rem; /* Top margin */
+  color: rgba(100, 100, 100, 0.5); /* Text color */
+}
+
+/* Styling for stat numbers with the "error" class */
+.stat__number.error {
+  color: red; /* Red text color for error state */
+  font-weight: 700; /* Increased font weight for emphasis */
+}
+
+/* Media query for tablet view */
+@media (max-width: 65rem) {
+  html {
+    font-size: 85%; /* Adjust font size for tablet view */
+  }
+}
+/* Media query for mobile view */
+@media (max-width: 50rem) {
+  html {
+    font-size: 45%; /* Adjust font size for mobile view */
+  }
+  .section {
+    flex-direction: column; /* Change flex direction for sections */
+    /* Adjust borders for stat panels */
+  }
+  .section .stat:nth-child(1), .section .stat:nth-child(2) {
+    border-bottom: none; /* Remove bottom border */
+  }
+  .section .stat:nth-child(3) {
+    border-left: 1px solid rgba(100, 100, 100, 0.5); /* Add left border */
+  }
+}/*# sourceMappingURL=styles.css.map */

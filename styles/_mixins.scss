@@ -1,0 +1,16 @@
+/* Sass mixin for styling stat panels */
+
+@mixin stat-panel-design {
+  flex: 1 9.375rem; /* Flexible width with a minimum of 9.375rem */
+  display: flex; /* Display as a flex container */
+  flex-direction: column; /* Arrange children in a column direction */
+  justify-content: center; /* Vertically center align child elements */
+  align-items: center; /* Horizontally center align child elements */
+  background-color: $blueish-gray-alpha; /* Background color */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+
+  /* Hover state */
+  &:hover {
+    opacity: 0.5; /* Reduce opacity on hover */
+  }
+}

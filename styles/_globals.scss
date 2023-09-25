@@ -1,7 +1,7 @@
 /* Set the base styling for the entire HTML document */
 html {
-  box-sizing: border-box;
-  font-size: 100%; /* Reset font size for consistent sizing */
+  box-sizing: border-box; /* Use border-box box model for all elements */
+  font-size: $font-lar; /* Reset font size for consistent sizing */
 }
 
 /* Apply the 'box-sizing' property to all elements and their pseudo-elements */
@@ -9,20 +9,23 @@ html {
 *::before,
 *::after {
   box-sizing: inherit; /* Inherit the 'box-sizing' property from the parent */
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Reset margin for all elements */
+  padding: 0; /* Reset padding for all elements */
 }
 
 /* Basic styling for the body of the webpage */
 body {
-  /* min-height: 100vh; /* Ensure the body covers at least the viewport height */
   margin: 0; /* Remove default margin to avoid unexpected spacing */
-  padding: 0; /* Vertical and horizontal padding for the content area */
-  // font-family: "Work Sans", sans-serif;
-  min-height: 100vh;
-  background-color: yellow;
+  padding: 0; /* Reset padding for the body element */
+  font-family: "Roboto", sans-serif; /* Set the default font family for text */
+  min-height: 100vh; /* Ensure the body covers at least the viewport height */
+  background-color: #e1e8eb; /* Set the background color for the body */
+  @extend %flex; /* Use the %flex placeholder to apply flexbox styles */
+  flex-direction: column; /* Arrange children in a column direction */
+  align-items: center; /* Center align child elements horizontally */
+  background-color: whitesmoke; /* Override background color with whitesmoke */
 }
 
-/* Mobile view */
-// @media (max-width: 50rem) {
-// }
+textarea {
+  all: unset; /* Reset all styles for the textarea element */
+}

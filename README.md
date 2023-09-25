@@ -1,5 +1,7 @@
 # [NAME] Project
 
+Word Analytics.
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -13,17 +15,20 @@
 
 ## Overview
 
-This web application is designed to
+This web application is thoughtfully crafted to empower users with the ability to effortlessly input text, after which the application performs a dual function: meticulously counting both words and characters.
 
 ## Features
 
-- **Counting from 0 to 10:** ...
+1. Word Count: Find out how many words are in your text.
+2. Character Count: Get the total character count of your input.
+3. Facebook Limit: See how many characters you have left before reaching the maximum for Facebook posts.
+4. Twitter Limit: Keep track of remaining characters for Twitter posts.
 
 ## Project Structure
 
 The project is structured as follows:
 
-Fancy-counter/
+word-analytics/
 
 - `app/`: Directory containing JavaScript files.
   - `app.js`: Main JavaScript logic and interaction
@@ -55,7 +60,9 @@ This project uses the following technologies:
 
 ## Screenshots
 
-<!-- <img src="image-1.png" alt="counter application desktop" width="200"/> -->
+<img src="image.png" alt="Word analytics desktop" width="200"/>
+<img src="image-1.png" alt="Word analytics with data desktop" width="200"/>
+<img src="image-2.png" alt="Word analytics with data mobile" width="200"/>
 
 ## Links
 
