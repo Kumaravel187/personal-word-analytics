@@ -1,6 +1,4 @@
-# [NAME] Project
-
-Word Analytics.
+# Word Analytics
 
 ## Table of Contents
 
