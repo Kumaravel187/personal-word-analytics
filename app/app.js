@@ -51,8 +51,8 @@ textAreaEl.addEventListener("input", () => {
   // Get the text input from the textarea.
   const userTextInput = textAreaEl.value;
 
-  // Split the input text into an array of words.
-  const userTextWords = userTextInput.split(" ");
+  // Split the input text into an array of words and remove whitespaces with trim
+  const userTextWords = userTextInput.trim().split(/\s+/);
 
   // Iterate through stat elements and update them based on their class names.
   statElements.forEach((statEl) => {
