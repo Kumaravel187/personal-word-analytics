@@ -193,7 +193,7 @@ textarea {
 /* Media query for mobile view */
 @media (max-width: 50rem) {
   html {
-    font-size: 30%; /* Adjust font size for mobile view */
+    font-size: 20%; /* Adjust font size for mobile view */
   }
   .section {
     flex-direction: column; /* Change flex direction for sections */
