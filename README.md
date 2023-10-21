@@ -64,7 +64,7 @@ This project uses the following technologies:
 
 ## Links
 
-solution url:
+solution url: https://meek-cannoli-c4bf3b.netlify.app/
 
 ## Contributing
 
